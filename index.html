@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spirit Builders - Inmobiliaria y Construcción Premium</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font: Montserrat & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config for Palette -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#06273A',
+                        'navy-dark': '#031724',
+                        'navy-light': '#0a3650',
+                        gold: '#E89B6A',
+                        'gold-hover': '#d48857',
+                        'gold-light': '#f5c6a5',
+                        brandgray: '#E6E6E6',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        body: ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #06273A;
+            color: #E6E6E6;
+        }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #06273A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E89B6A;
+            border-radius: 4px;
+        }
+        /* Pulse animations */
+        @keyframes pulse-gold {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.85; transform: scale(1.05); }
+        }
+        .animate-pulse-gold {
+            animation: pulse-gold 3s infinite ease-in-out;
+        }
+        /* Glassmorphic effect */
+        .glass-panel {
+            background: rgba(6, 39, 58, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(232, 155, 106, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-navy-dark text-xs py-2 px-4 border-b border-gold/20 text-brandgray">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center gap-1"><i class="fas fa-phone text-gold text-xs"></i> +51 928 598 496</span>
+                <span class="hidden md:flex items-center gap-1"><i class="fas fa-envelope text-gold text-xs"></i> contacto@spiritbuilders.com</span>
+            </div>
+            <div class="flex items-center space-x-3 text-gold">
+                <span class="text-xs text-brandgray/80 hidden sm:inline">¡Atención personalizada las 24 hrs!</span>
+                <a href="https://wa.me/51928598496" target="_blank" class="hover:text-white transition-colors" title="Contactar por WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-40 glass-panel shadow-xl transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo SVG derived from image -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-12 flex items-center justify-center">
+                        <svg viewBox="0 0 100 140" class="w-full h-full text-gold fill-current transition-transform duration-300 group-hover:scale-105">
+                            <!-- Geometric Spirit Tower Logo -->
+                            <path d="M40 10 L50 0 L60 10 L60 110 L40 110 Z" fill="#E89B6A"/>
+                            <path d="M65 30 L75 20 L85 30 L85 110 L65 110 Z" fill="#E89B6A" opacity="0.8"/>
+                            <path d="M15 50 L25 40 L35 50 L35 110 L15 110 Z" fill="#E89B6A" opacity="0.8"/>
+                            <path d="M30 115 L70 115 L70 135 L30 135 Z" fill="none" stroke="#E89B6A" stroke-width="8"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-xl tracking-wider text-white">SPIRIT</span>
+                        <span class="font-heading text-xs tracking-widest text-gold uppercase -mt-1">BUILDERS</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu Links -->
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold tracking-wide">
+                    <a href="#inicio" class="text-gold transition-colors hover:text-gold-light">Inicio</a>
+                    <a href="#diferenciales" class="text-brandgray hover:text-gold transition-colors">¿Por qué nosotros?</a>
+                    <a href="#galeria" class="text-brandgray hover:text-gold transition-colors">Propiedades & Tours</a>
+                    <a href="#servicios" class="text-brandgray hover:text-gold transition-colors">Servicios</a>
+                    <a href="#ubicacion" class="text-brandgray hover:text-gold transition-colors">Ubicación</a>
+                    <a href="#contacto" class="text-brandgray hover:text-gold transition-colors">Contacto</a>
+                </div>
+
+                <!-- WhatsApp CTA Button -->
+                <div class="hidden sm:flex items-center">
+                    <a href="https://wa.me/51928598496?text=Hola%20Spirit%20Builders,%20deseo%20mayor%20informaci%C3%B3n" 
+                       target="_blank"
+                       class="bg-gold text-navy hover:bg-white font-bold py-2.5 px-5 rounded-full transition-all duration-300 shadow-lg hover:shadow-gold/30 flex items-center gap-2 transform hover:-translate-y-0.5">
+                        <i class="fab fa-whatsapp text-lg text-emerald-700"></i>
+                        <span>928 598 496</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brandgray hover:text-gold focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-dark border-b border-gold/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="mobile-link block py-2 text-gold font-medium border-b border-navy-light">Inicio</a>
+            <a href="#diferenciales" class="mobile-link block py-2 text-brandgray hover:text-gold border-b border-navy-light">¿Por qué nosotros?</a>
+            <a href="#galeria" class="mobile-link block py-2 text-brandgray hover:text-gold border-b border-navy-light">Propiedades & Tours</a>
+            <a href="#servicios" class="mobile-link block py-2 text-brandgray hover:text-gold border-b border-navy-light">Servicios</a>
+            <a href="#ubicacion" class="mobile-link block py-2 text-brandgray hover:text-gold border-b border-navy-light">Ubicación</a>
+            <a href="#contacto" class="mobile-link block py-2 text-brandgray hover:text-gold">Contacto</a>
+            <div class="pt-2">
+                <a href="https://wa.me/51928598496" target="_blank" class="w-full bg-gold text-navy text-center font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-xl"></i> Escribir por WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
+        <!-- Background Overlay with Luxury Architecture Backdrop -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Luxury Modern Architecture" 
+                 class="w-full h-full object-cover object-center filter brightness-40 scale-105 animate-pulse-slow">
+            <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/20 border border-gold/40 text-gold text-xs font-semibold uppercase tracking-wider mb-6">
+                    <i class="fas fa-gem text-xs"></i> Desarrollos Inmobiliarios Exclusivos
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Espacios que <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-gold-light">Inspiran</span> Tu Estilo de Vida
+                </h1>
+                <p class="text-lg text-brandgray/90 mb-8 leading-relaxed font-body">
+                    En <strong>Spirit Builders</strong> transformamos tus proyectos en realidades tangibles. Innovación arquitectónica, acabados de primera calidad y ubicaciones privilegiadas diseñadas para superar toda expectativa.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#galeria" class="bg-gold text-navy hover:bg-white font-bold py-4 px-8 rounded-xl text-center shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        Explorar Proyectos <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="https://wa.me/51928598496?text=Hola,%20quisiera%20agendar%20una%20cita%20o%20visita%20guiada" 
+                       target="_blank" 
+                       class="border-2 border-gold text-gold hover:bg-gold hover:text-navy font-bold py-4 px-8 rounded-xl text-center transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> Agendar Cita Directa
+                    </a>
+                </div>
+
+                <!-- Key Metrics Quick Stats -->
+                <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-brandgray/20">
+                    <div>
+                        <p class="text-2xl sm:text-3xl font-extrabold text-gold">+120</p>
+                        <p class="text-xs text-brandgray/70 uppercase tracking-wide">Proyectos Entregados</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl sm:text-3xl font-extrabold text-gold">100%</p>
+                        <p class="text-xs text-brandgray/70 uppercase tracking-wide">Garantía Legal</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl sm:text-3xl font-extrabold text-gold">15 Años</p>
+                        <p class="text-xs text-brandgray/70 uppercase tracking-wide">Experiencia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Nosotros vs La Competencia (Competitive Advantage) -->
+    <section id="diferenciales" class="py-20 bg-navy-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-gold mb-2">Nuestra Propuesta de Valor</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">¿Por qué elegir Spirit Builders?</p>
+                <div class="w-20 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+                <p class="mt-4 text-brandgray/80 font-body">No solo vendemos inmuebles; creamos experiencias habitacionales superiores con total transparencia y respaldo profesional constante.</p>
+            </div>
+
+            <!-- Interactive Comparison Table/Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                <!-- Competitive Card: Spirit Builders -->
+                <div class="glass-panel p-8 rounded-2xl border-2 border-gold relative shadow-2xl bg-gradient-to-b from-navy-light/40 to-navy">
+                    <div class="absolute -top-4 right-6 bg-gold text-navy font-extrabold text-xs uppercase px-4 py-1.5 rounded-full shadow">
+                        Líderes en Innovación
+                    </div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-gold/20 flex items-center justify-center text-gold text-xl font-bold">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Spirit Builders</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 text-emerald-400 font-bold"><i class="fas fa-check-circle text-lg"></i></div>
+                            <div>
+                                <strong class="text-white">Recorridos Virtuales 3D y Video Real:</strong> 
+                                <span class="text-brandgray/80 text-sm block">Visualiza cada rincón desde tu celular sin traslados innecesarios.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 text-emerald-400 font-bold"><i class="fas fa-check-circle text-lg"></i></div>
+                            <div>
+                                <strong class="text-white">Respuesta Inmediata por WhatsApp:</strong> 
+                                <span class="text-brandgray/80 text-sm block">Atención directa con nuestro equipo de asesores en minutos.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 text-emerald-400 font-bold"><i class="fas fa-check-circle text-lg"></i></div>
+                            <div>
+                                <strong class="text-white">Diseños Arquitectónicos Personalizados:</strong> 
+                                <span class="text-brandgray/80 text-sm block">Posibilidad de personalizar acabados y distribuciones sobre plano.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 text-emerald-400 font-bold"><i class="fas fa-check-circle text-lg"></i></div>
+                            <div>
+                                <strong class="text-white">Transparencia de Costos sin Sorpresas:</strong> 
+                                <span class="text-brandgray/80 text-sm block">Precios finales claros desde el primer día, sin comisiones ocultas.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Competitive Card: Competencia Tradicional -->
+                <div class="bg-navy/50 p-8 rounded-2xl border border-white/10 opacity-80 hover:opacity-100 transition-opacity">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-700/50 flex items-center justify-center text-gray-400 text-xl font-bold">
+                            <i class="fas fa-store-alt-slash"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-400">Inmobiliarias Tradicionales</h3>
+                    </div>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 text-red-400"><i class="fas fa-times-circle text-lg"></i></div>
+                            <div>
+                                <strong class="text-gray-300">Fotos Engañosas y Pocos Videos:</strong> 
+                                <span class="text-sm block">Visitas presenciales frustrantes que no coinciden con la realidad.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 text-red-400"><i class="fas fa-times-circle text-lg"></i></div>
+                            <div>
+                                <strong class="text-gray-300">Tiempos de Respuesta Lentos:</strong> 
+                                <span class="text-sm block">Procesos lentos por correo o llamadas interminables.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 text-red-400"><i class="fas fa-times-circle text-lg"></i></div>
+                            <div>
+                                <strong class="text-gray-300">Modelos Estándar y Rígidos:</strong> 
+                                <span class="text-sm block">Sin flexibilidad para adaptar espacios a tus necesidades reales.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 text-red-400"><i class="fas fa-times-circle text-lg"></i></div>
+                            <div>
+                                <strong class="text-gray-300">Comisiones y Costos Extra:</strong> 
+                                <span class="text-sm block">Gastos de gestión adicionales que encarecen la compra.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Gallery Section (Images and Video Showcase) -->
+    <section id="galeria" class="py-20 bg-navy relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-gold mb-2">Catálogo de Proyectos</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Galería de Imágenes & Recorridos</p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="gallery-filters">
+                    <button data-filter="all" class="filter-btn bg-gold text-navy font-bold px-4 py-2 rounded-lg text-sm transition-all">Todos</button>
+                    <button data-filter="fotos" class="filter-btn bg-navy-light text-brandgray hover:text-white font-medium px-4 py-2 rounded-lg text-sm transition-all">Fotografías</button>
+                    <button data-filter="videos" class="filter-btn bg-navy-ligh
